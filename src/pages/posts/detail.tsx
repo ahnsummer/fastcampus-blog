@@ -1,5 +1,15 @@
-export const PostDetail = () => {
-  return <h1>PostDetail</h1>;
+import Header from "components/Header";
+import Footer from "components/Footer";
+import PostDetail from "components/PostDetail";
+
+export const PostPage = () => {
+  return (
+    <>
+      <Header />
+      <PostDetail />
+      <Footer />
+    </>
+  );
 };
 
-export default PostDetail;
+export default PostPage;
