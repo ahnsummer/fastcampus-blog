@@ -1,7 +1,7 @@
 import Header from "components/Header";
 import LoginForm from "components/LoginForm";
 
-export const Login = () => {
+export const LoginPage = () => {
   return (
     <>
       <Header />
@@ -10,4 +10,4 @@ export const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

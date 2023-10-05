@@ -10,10 +10,13 @@ import PostPage from "pages/posts/detail";
 import PostNew from "pages/posts/new";
 import PostEdit from "pages/posts/edit";
 import ProfilePage from "pages/profile";
-import Login from "pages/login";
-import SignUp from "pages/signup";
+import LoginPage from "pages/login";
+import SignUpPage from "pages/signup";
+import { useState } from "react";
 
 export default function Router() {
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+
   const router = createBrowserRouter([
     {
       children: [
@@ -44,11 +47,11 @@ export default function Router() {
         },
         {
           path: "/login",
-          element: <Login />,
+          element: <LoginPage />,
         },
         {
           path: "/signup",
-          element: <SignUp />,
+          element: <SignUpPage />,
         },
         {
           path: "*",
@@ -57,5 +60,33 @@ export default function Router() {
       ],
     },
   ]);
-  return <RouterProvider router={router} />;
+
+  const loginRouter = createBrowserRouter([
+    {
+      children: [
+        {
+          path: "/login",
+          element: <LoginPage />,
+        },
+        {
+          path: "/signup",
+          element: <SignUpPage />,
+        },
+        {
+          path: "*",
+          element: <LoginPage />,
+        },
+      ],
+    },
+  ]);
+
+  return (
+    <>
+      {isAuthenticated ? (
+        <RouterProvider router={router} />
+      ) : (
+        <RouterProvider router={loginRouter} />
+      )}
+    </>
+  );
 }
