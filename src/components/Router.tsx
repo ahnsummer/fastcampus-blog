@@ -11,7 +11,7 @@ import PostNew from "pages/posts/new";
 import PostEdit from "pages/posts/edit";
 import ProfilePage from "pages/profile";
 import Login from "pages/login";
-import SignUp from "pages/signUp";
+import SignUp from "pages/signup";
 
 export default function Router() {
   const router = createBrowserRouter([

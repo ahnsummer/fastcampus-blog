@@ -17,9 +17,10 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"],
+  "include": ["src", "src/firebaseApp.ts"],
   "paths": {
     "pages/*": ["pages/*"],
-    "components/*": ["components/*"]
+    "components/*": ["components/*"],
+    "firebaseApp": ["firebaseApp"]
   }
 }

@@ -1,5 +1,13 @@
+import Header from "components/Header";
+import LoginForm from "components/LoginForm";
+
 export const Login = () => {
-  return <h1>Login</h1>;
+  return (
+    <>
+      <Header />
+      <LoginForm />
+    </>
+  );
 };
 
 export default Login;
